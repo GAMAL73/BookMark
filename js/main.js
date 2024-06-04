@@ -52,7 +52,6 @@ function addBook(){
     resat();
     }
 }
-addBook()
 function resat() {
     nameProdact.value=null
     site.value=null
