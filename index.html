@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+</head>
+<body class="bg-black">
+<div id="popup">
+</div>
+    <div class="container py-5">
+        <div class="tittel text-center">
+            <h1 class="h1 fw-bolder">Bookmarker</h1>
+        </div>
+        <div class="caption text-center">
+            <span>Bookmark your favorite sites</span>
+        </div>
+        <div class="form">
+            <div class="my-3">
+                <label for="SiteName" class="form-label">Site Name</label>
+                <input oninput="validationName()" type="text" id="SiteName" class="form-control" minlength="2" maxlength="20"> <!-- validation(this)--> 
+                
+            </div>
+            <div class="my-3">
+                <label for="SiteURL" class="form-label">Site URL</label>
+                <input oninput="validationSiteURL()" type="url" id="SiteURL" class="form-control"><!-- validation(this)--> 
+            </div>
+            <button onclick="addBook()" data-bs-toggle="modal" data-bs-target="#exampleModal"  class="vip"><span>submit</span></button>
+        </div >
+        <div class="row py-5">
+            <table class="table-dark table mt-4 text-center">
+                    <thead>
+                        <tr>
+                            <th class="text-capitalize">index</th>
+                            <th class="text-capitalize">Website Name</th>
+                            <th class="text-capitalize">Visit</th>
+                            <th class="text-capitalize">Delete</th>
+                        </tr>
+                    </thead>
+                <tbody id="tableContent">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>
